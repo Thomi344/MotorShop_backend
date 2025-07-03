@@ -4,10 +4,13 @@
 import express from "express";
 import environments from "./src/api/config/environments.js";
 import cors from "cors";
-import { productosRouter } from "./src/api/routes/index.js";
+import { productosRouter,viewRoutes } from "./src/api/routes/index.js";
 import {loggerUrl} from "./src/api/middlewares/middlewares.js";
+// ----- ANTES HAY QUE TENER INSTALADO EJS (npm i ejs) ----- //
+import {__dirname,join} from "./src/api/utils/index.js";
 
 // ----- npm run dev (para iniciar el servidor) ----- //
+
 
 // ==================
 // === CONSTANTES ===
@@ -28,10 +31,26 @@ app.use(express.json());
 // ------ Logear todas las solicitudes ----- //
 app.use(loggerUrl);
 
+
 // ========================
 // ======= SERVIDOR =======
 // ========================
+// ----- CONFIGURACION DE VISTAS (EJS COMO MOTOR DE PLANTILLAS) ----- //
+app.set("view engine","ejs");
+// ----- Indicamos a la app que sirve vistas desde la carpeta views ----- //
+app.set("views",join(__dirname,"src/views"));
+// ----- Middleware para servir archivos estaticos ----- //
+app.use(express.static(join(__dirname, "src/public")));
+
+
+// =========================================
+// === ENDPOINTS (SALIDA DE INFORMACION) ===
+// =========================================
 app.get("/",(req,res)=>{ res.send("Hola mundo"); });
+
+// ----- VISTAS DASHBOARD ----- //
+app.use("/dashboard",viewRoutes);
+// ----- API REST ----- //
 app.use("/api/productos",productosRouter);
 
 

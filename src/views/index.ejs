@@ -1,0 +1,26 @@
+<%- include("partials/head.ejs") %>
+<%- include("partials/nav.ejs") %>
+        <h1><%= about %></h1>
+    <hr>
+    <main id="contenedor-get">
+    <div id="productos-container">
+        <ul id="productos-lista">
+        <% if (productos && productos.length) { %>
+            <% productos.forEach(alumno => { %>
+            <li class="li-listados productos-listados">
+                <p>
+                Id: <%= alumno.id %> /
+                Nombre: <%= alumno.nombre %> /
+                <strong>dni: <%= alumno.dni %></strong>
+                </p>
+            </li>
+            <% }); %>
+        <% } else { %>
+            <li class="li-listados productos-listados">
+            No hay productos para mostrar.
+            </li>
+        <% } %>
+        </ul>
+    </div>
+    </main>
+<%- include("partials/footer.ejs") %>

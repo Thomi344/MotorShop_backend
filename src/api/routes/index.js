@@ -1,2 +1,11 @@
+// ----- CONECTAMOS TODAS LAS RUTAS Y LAS EXPORTAMOS EN UN MISMO ARCHIVO ----- //
+// ======================
+// === IMPORTACIONES ====
+// ======================
 import productosRouter from "./productos.routes.js";
-export{productosRouter};
+import  viewRoutes from "./views.routes.js";
+
+// =====================
+// === EXPORTACIONES ===
+// =====================
+export{productosRouter,viewRoutes};
