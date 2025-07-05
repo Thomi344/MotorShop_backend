@@ -6,6 +6,8 @@ import environments from "./src/api/config/environments.js";
 import cors from "cors";
 import { productosRouter,viewRoutes } from "./src/api/routes/index.js";
 import {loggerUrl} from "./src/api/middlewares/middlewares.js";
+
+
 // ----- ANTES HAY QUE TENER INSTALADO EJS (npm i ejs) ----- //
 import {__dirname,join} from "./src/api/utils/index.js";
 
@@ -15,8 +17,8 @@ import {__dirname,join} from "./src/api/utils/index.js";
 // ==================
 // === CONSTANTES ===
 // ==================
-const app = express()
-const PORT = environments.port;
+const app = express() //Inicializamos express
+const PORT = environments.port; //Declaramos una variable const con el número de puerto obtenido del .env
 
 
 // =====================================
@@ -53,6 +55,4 @@ app.use("/dashboard",viewRoutes);
 // ----- API REST ----- //
 app.use("/api/productos",productosRouter);
 
-
-
-app.listen(PORT,()=>{console.log("Servidor corriendo en el puerto: "+PORT)});
+app.listen(PORT,()=>{console.log("Servidor corriendo en el puerto: " + PORT)});
