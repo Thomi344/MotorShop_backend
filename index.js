@@ -56,18 +56,5 @@ app.use("/dashboard",viewRoutes);
 // ----- API REST ----- //
 app.use("/api/productos",productosRouter);
 
-// Devuelve el último id de la tabla Productos
 
-app.get("/api/productos/ultimo", async (req, res) => {
-    try {
-        const [rows] = await connection.query(
-        "SELECT MAX(id) AS lastId FROM productos"
-        );
-        const lastId = rows[0].lastId || 0;
-        res.json({ lastId });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: "Error interno del servidor" });
-    }
-});
 app.listen(PORT,()=>{console.log("Servidor corriendo en el puerto: " + PORT)});
