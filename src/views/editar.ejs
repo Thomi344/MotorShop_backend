@@ -1,0 +1,28 @@
+<%- include("partials/head.ejs") %>
+<link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="/css/editar.css">
+<script type="module" defer src="/js/editar.js"></script>  
+<%- include("partials/header.ejs") %>
+</header>
+<main id="contenedor-get">
+
+    <!-- FORM CONSULTAR -->
+    <div id="getProduct-container" class="crudForm-container">
+        <h2><%= about %> </h2>
+
+        <form id="getProduct-form">
+        <label for="idProd">Id producto</label>
+        <input type="number" name="idProd" id="idProd" required>
+        <input type="submit" value="Consultar producto">
+        </form>
+    </div>
+
+    <!-- RESULTADO -->
+    <div id="getId-container">
+        <ul id="getId-list"></ul>
+    </div>
+
+    <!-- FORM EDITAR -->
+    <div id="updateForm-container"></div>
+
+</main>

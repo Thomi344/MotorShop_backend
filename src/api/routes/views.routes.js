@@ -13,13 +13,13 @@ const router = Router();
 //---- Get Productos ---- //
 router.get("/",obtenerTodosProductosDash);
 //---- Get Productos por ID ---- //
-router.get("/:id",obtenerPorIdDash);
+router.get("/consultar",obtenerPorIdDash);
 //---- Crear nuevo Producto ---- //
-router.post("/",crearNuevoProductoDash);
+router.get("/crear",crearNuevoProductoDash);
 //---- Eliminar Producto ---- //
-router.delete("/:id",eliminarProductoDash);
+router.get("/eliminar",eliminarProductoDash);
 //---- Editar Producto ---- //
-router.put("/:id",editarProductoDash);
+router.get("/editar",editarProductoDash);
 
 // =====================
 // === EXPORTACIONES ===

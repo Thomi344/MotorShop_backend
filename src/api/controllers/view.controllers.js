@@ -23,7 +23,7 @@ export const obtenerTodosProductosDash = async(req ,res )=>{
         res.render("index",{
             title: "Inicio",
             about: "Todos los Productos",
-            productos : respuestaProductos[0]
+            productos : respuestaProductos
         });
     }catch(error){
         console.error("Error al obtener informacion para dashboard: ",error);

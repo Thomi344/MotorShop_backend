@@ -1,0 +1,23 @@
+<%- include("partials/head.ejs") %>
+<link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="/css/consultar.css">
+<script type="module" defer src="/js/consultar.js"></script>  
+<%- include("partials/header.ejs") %>
+</header>
+<body>
+    <main id="contenedor-get">
+    <div id="productos-container" class="crudForm-container">
+        <h2>Consultar Producto</h2>
+
+        <form id="getProduct-form">
+        <label for="idProd">Id Producto</label>
+        <input type="number" name="idProd" id="idProd" required>
+        <input type="submit" value="Consultar Producto">
+        </form>
+    </div>
+
+    <div id="getId-container">
+        
+    </div>
+    </main>
+</body>

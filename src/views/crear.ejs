@@ -1,0 +1,89 @@
+<%- include("partials/head.ejs") %>
+<link rel="stylesheet" href="/css/crear.css">
+<script type="module" defer src="/js/crear.js"></script>  
+
+<%- include("partials/header.ejs") %>
+</header>
+
+<body>
+    <main id="contenedor-put">
+        <div id="actualizarProducto-container" class="crudForm-container">
+            <h2><%= about %></h2>
+
+            <form id="form-put-producto" autocomplete="off">
+            <!-- Nombre (requerido) -->
+            <label for="nombreProducto">Nombre</label>
+            <input
+                type="text"
+                name="nombre"
+                id="nombreProducto"
+                maxlength="80"
+                required
+                placeholder="Ej. Toyota Corolla"
+            >
+
+            <!-- Descripción (requerido) -->
+            <label for="descripcionProducto">Descripción</label>
+            <textarea
+                name="descripcion"
+                id="descripcionProducto"
+                rows="3"
+                maxlength="250"
+                required
+                placeholder="Sedán compacto con excelente consumo."
+            ></textarea>
+
+            <!-- Precio (requerido) -->
+            <label for="precioProducto">Precio</label>
+            <input
+                type="number"
+                name="precio"
+                id="precioProducto"
+                step="0.01"
+                min="0"
+                required
+                placeholder="12000000.00"
+            >
+
+
+            <!-- Tipo (requerido) -->
+            <label for="tipoProducto">Tipo</label>
+            <select name="tipo" id="tipoProducto" required>
+            <option value="" disabled selected>Seleccione una opción</option>
+            <option value="auto">Auto</option>
+            <option value="repuesto">Repuesto</option>
+            </select>
+
+
+
+            <!-- Activo (requerido) -->
+            <label for="activoProducto">Activo</label>
+            <select
+                name="activo"
+                id="activoProducto"
+                required
+            >
+                <option value="" disabled selected>-- Seleccione --</option>
+                <option value="1">Sí</option>
+                <option value="0">No</option>
+            </select>
+
+            <!-- URL de imagen (opcional) -->
+            <label for="imagenProducto">URL de imagen</label>
+            <input
+                type="url"
+                name="imagen"
+                id="imagenProducto"
+                placeholder="http://..."
+            >
+
+            <!-- Botón de envío -->
+            <input
+                type="submit"
+                value="Crear producto"
+            >
+            </form>
+        </div>
+    </main>
+
+</body>

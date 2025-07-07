@@ -1,26 +1,38 @@
 <%- include("partials/head.ejs") %>
-<%- include("partials/nav.ejs") %>
-        <h1><%= about %></h1>
-    <hr>
-    <main id="contenedor-get">
-    <div id="productos-container">
-        <ul id="productos-lista">
-        <% if (productos && productos.length) { %>
-            <% productos.forEach(alumno => { %>
-            <li class="li-listados productos-listados">
-                <p>
-                Id: <%= alumno.id %> /
-                Nombre: <%= alumno.nombre %> /
-                <strong>dni: <%= alumno.dni %></strong>
-                </p>
-            </li>
-            <% }); %>
-        <% } else { %>
-            <li class="li-listados productos-listados">
-            No hay productos para mostrar.
-            </li>
-        <% } %>
-        </ul>
-    </div>
-    </main>
-<%- include("partials/footer.ejs") %>
+<link rel="stylesheet" href="/css/index.css">
+<script type="module" defer src="/js/productos.js"></script>  
+<%- include("partials/header.ejs") %>
+</header>
+<body>
+    <main>
+
+            <section class="zona-principal">
+
+                <!-- Toggle lateral -->
+                <aside class="toggle-lateral">
+                    <input type="checkbox" id="categoria-toggle">
+                    <label for="categoria-toggle" class="switch">
+                        <span class="opcion auto"><i class="fas fa-car"></i> Autos </span>
+                        <span class="opcion repuesto"><i class="fas fa-cogs"></i> Repuestos </span>
+                        <span class="slider"></span>
+                    </label>
+                </aside>
+
+                <!-- Sección productos -->
+                <section class="seccion-productos">
+                    <h2 class="titulo-productos">Nuestros Productos</h2>
+
+                    <div class="botones-ordenamiento">
+                        <button id="ordenar-nombre">Ordenar por Nombre </button>
+                        <button id="ordenar-precio">Ordenar por Precio </button>
+                    </div>
+
+                    <div class="contenedor-productos" id="contenedor-productos">
+                        <!-- El contenido se carga mediante el archivo productos.js -->
+                    </div>
+                </section>
+
+            </section>
+
+        </main>
+</body>

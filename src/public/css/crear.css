@@ -1,0 +1,89 @@
+:root {
+    --color-base: #34495e;
+    --color-dark: #2c3e50;
+    --color-light: #ffffff;
+    --color-secundario: #34495e;
+    --color-repuesto: #5d6d7e;
+}
+body{
+    background-color: #f1f1f1;
+}
+main#contenedor-put {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.crudForm-container {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-repuesto);
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crudForm-container h2 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--color-base);
+}
+
+form#form-put-producto {
+    display: flex;
+    flex-direction: column;
+}
+
+form#form-put-producto label {
+    margin-top: 12px;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+form#form-put-producto input[type="text"],
+form#form-put-producto input[type="number"],
+form#form-put-producto input[type="date"],
+form#form-put-producto input[type="url"],
+form#form-put-producto textarea,
+form#form-put-producto select {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 4px;
+    border: 1px solid var(--color-base);
+    border-radius: 4px;
+    background-color: white;
+    font-size: 1rem;
+    color: var(--color-dark);
+    box-sizing: border-box;
+}
+
+form#form-put-producto input:focus,
+form#form-put-producto textarea:focus,
+form#form-put-producto select:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 2px rgba(52, 73, 94, 0.2);
+}
+
+form#form-put-producto textarea {
+    resize: vertical;
+}
+
+form#form-put-producto input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 16px;
+    background-color: var(--color-base);
+    color: var(--color-light);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form#form-put-producto input[type="submit"]:hover {
+    background-color: var(--color-secundario);
+}
+
+

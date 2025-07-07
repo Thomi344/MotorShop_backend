@@ -1,0 +1,112 @@
+:root {
+    --color-base: #34495e;
+    --color-dark: #2c3e50;
+    --color-light: #ecf0f1;
+    --color-warning: #f1c40f;
+    --color-repuesto: #5d6d7e;
+}
+
+#contenedor-get {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    font-family: "Segoe UI", sans-serif;
+}
+
+.crudForm-container {
+    margin-bottom: 30px;
+
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-dark);
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button,
+form input[type="submit"] {
+    background-color: var(--color-base);
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover,
+    form input[type="submit"]:hover {
+    background-color: var(--color-dark);
+}
+
+ul#getId-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.producto-item {
+    background: #e8edf2; 
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-left: 4px solid var(--color-base);
+}
+
+.producto-item button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: var(--color-base);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto-item button:hover {
+    background-color: var(--color-dark);
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+body, 
+html {
+    background-color: #f1f1f1; ;
+}
+
+

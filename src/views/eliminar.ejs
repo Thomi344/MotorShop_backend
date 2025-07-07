@@ -1,0 +1,31 @@
+<%- include("partials/head.ejs") %>
+<link rel="stylesheet" href="/css/eliminar.css">
+<script type="module" defer src="/js/eliminar.js"></script>  
+<%- include("partials/header.ejs") %>
+</header>
+<body>
+    <main id="contenedor-delete">
+    <div id="eliminarProducto-container" class="crudForm-container">
+        <h2>Eliminar producto</h2>
+
+        <!-- Formulario para consultar producto -->
+        <form id="form-buscar-producto">
+        <label for="idEliminar">ID del producto</label>
+        <input type="number" name="id" id="idEliminar" required>
+        <input type="submit" value="Buscar producto">
+        </form>
+    </div>
+
+    <!-- Muestra del producto consultado -->
+    <div id="productoEncontrado" style="display: none;">
+        <h3>Producto encontrado:</h3>
+        <ul id="producto-info" class="producto-item"></ul>
+
+        <form id="form-eliminar-producto">
+        <input type="hidden" name="id" id="idConfirmarEliminar">
+        <input type="submit" value="Eliminar producto" class="btn-eliminar">
+        </form>
+    </div>
+    </main>
+
+</body>

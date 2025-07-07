@@ -1,0 +1,90 @@
+:root {
+    --color-base: #34495e;
+    --color-dark: #2c3e50;
+    --color-light: #ecf0f1;
+    --color-secundario: #34495e;
+    --color-repuesto: #5d6d7e;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor-get {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crudForm-container {
+    margin-bottom: 30px;
+}
+
+.crudForm-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+form input[type="number"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background-color: var(--color-base);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--color-dark);
+}
+
+#productos-container {
+    padding: 20px;
+}
+
+#getId-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+}
+
+.productos-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.producto-item {
+    background-color: var(--color-light); /* antes #e8f0fe */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.producto-item.error {
+    background-color: #ffd6d6;
+    color: #c0392b;
+    font-weight: bold;
+}
