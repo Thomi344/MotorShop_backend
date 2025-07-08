@@ -9,6 +9,7 @@
 /* ====================================
     SECCIÓN PRODUCTOS
 ==================================== */
+
 .zona-principal {
     display: flex;
     flex-direction: row;
@@ -18,11 +19,10 @@
 
 .toggle-lateral {
     width: 220px;
-    padding: 20px;
+    padding-top: 250px;
     background-color: var(--color-light);
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .switch {
@@ -139,7 +139,7 @@
 }
 
 .tarjeta-producto {
-    background-color: white;
+    background-color: rgb(189, 182, 182);
     border-radius: 12px;
     padding: 16px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -201,6 +201,58 @@
 .tarjeta-producto button:hover {
     background-color: var(--color-dark);
 }
+
+
+/*==============================================
+//// Comportamiento al cambiar al modo oscuro ///
+===============================================*/
+
+.dark-mode .tarjeta-producto{
+    background-color: rgb(75, 74, 74);
+    border-color: aliceblue;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .seccion-productos{
+    background-color: rgb(27, 27, 27);
+}
+
+.dark-mode .tarjeta-producto .descripcion,
+.dark-mode .tarjeta-producto .precio {
+    color: var(--color-light);
+}
+
+.dark-mode .tarjeta-producto h3 {
+    color: black;
+}
+
+.dark-mode .tarjeta-producto img {
+    border: solid black 2px;
+}
+
+.dark-mode .toggle-lateral {
+    background-color: rgb(27, 27, 27);
+}
+
+.dark-mode .botones-ordenamiento button {
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode .titulo-productos {
+    color: rgb(148, 193, 230);
+}
+
+.dark-mode #boton-modo_oscuro{
+    color: white;
+    background-color: rgb(4, 8, 63);
+}
+
+.dark-mode #boton-modo_oscuro:hover {
+    background-color: white;
+    color:  rgb(4, 8, 63);
+    border: solid  rgb(4, 8, 63) 1px ;
+}
+
 
 /* ================================
     MEDIA QUERIES

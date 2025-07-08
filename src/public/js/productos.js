@@ -105,14 +105,16 @@ document.getElementById("ordenar-precio").addEventListener("click", () => {
     imprimirProductos(ordenadosPorPrecio);
 });
 
-
-
-
+function modoOscuro(){
+    document.getElementById("boton-modo_oscuro").addEventListener("click", () =>{
+        document.body.classList.toggle("dark-mode");
+    } )
+}
 // =============================== Inicializar funciones ===============================
 function init(){
     imprimirProductos(ListaProductos);
-    imprimirPorCategoria(ListaProductos)
-
+    imprimirPorCategoria(ListaProductos);
+    modoOscuro();
 };
 
 

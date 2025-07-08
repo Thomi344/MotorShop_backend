@@ -56,5 +56,4 @@ app.use("/dashboard",viewRoutes);
 // ----- API REST ----- //
 app.use("/api/productos",productosRouter);
 
-
 app.listen(PORT,()=>{console.log("Servidor corriendo en el puerto: " + PORT)});
