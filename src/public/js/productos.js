@@ -110,6 +110,7 @@ function modoOscuro(){
         document.body.classList.toggle("dark-mode");
     } )
 }
+
 // =============================== Inicializar funciones ===============================
 function init(){
     imprimirProductos(ListaProductos);

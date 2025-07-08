@@ -138,6 +138,18 @@ h1{
     color: var(--color-light);
     border: solid #ecf0f1 1px ;
 }
+/*Comportamiento con el modo oscuro activado*/
+
+.dark-mode #boton-modo_oscuro{
+    color: white;
+    background-color: rgb(4, 8, 63);
+}
+
+.dark-mode #boton-modo_oscuro:hover {
+    background-color: white;
+    color:  rgb(4, 8, 63);
+    border: solid  rgb(4, 8, 63) 1px ;
+}
 
 
 @font-face {
