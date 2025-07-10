@@ -4,8 +4,9 @@
 // ======================
 import productosRouter from "./productos.routes.js";
 import  viewRoutes from "./views.routes.js";
+import usuariosRouter from "./usuarios.routes.js";
 
 // =====================
 // === EXPORTACIONES ===
 // =====================
-export{productosRouter,viewRoutes};
+export{productosRouter,viewRoutes,usuariosRouter};

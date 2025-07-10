@@ -3,7 +3,8 @@
 // === IMPORTACIONES ====
 // ======================
 import { Router } from "express";
-import { crearNuevoProductoDash,editarProductoDash,eliminarProductoDash,obtenerPorIdDash,obtenerTodosProductosDash } from "../controllers/view.controllers.js";
+import { crearNuevoProductoDash,editarProductoDash,eliminarProductoDash,obtenerPorIdDash,obtenerTodosProductosDash,renderLogin,renderRegister } from "../controllers/view.controllers.js";
+
 
 const router = Router();
 // =========================================
@@ -20,7 +21,10 @@ router.get("/crear",crearNuevoProductoDash);
 router.get("/eliminar",eliminarProductoDash);
 //---- Editar Producto ---- //
 router.get("/editar",editarProductoDash);
-
+//---- Login User ---- //
+router.get("/login",renderLogin)
+//---- register User ---- //
+router.get("/register",renderRegister)
 // =====================
 // === EXPORTACIONES ===
 // =====================

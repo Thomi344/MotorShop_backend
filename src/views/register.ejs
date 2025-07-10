@@ -1,0 +1,20 @@
+<%- include("partials/head.ejs") %>
+<link rel="stylesheet" href="/css/register.css">
+<script type="module" defer src="/js/register.js"></script>
+
+</header>
+
+<body>
+    <div class="register-container">
+        <h1 class="register-title">Registrarse</h1>
+        <form class="register-form" id="register-form" autocomplete="off">
+            <input type="email" placeholder="Correo electrónico" name="email" required />
+            <input type="password" placeholder="Contraseña" name="password_hash" required />
+            <button type="submit" id="register-btn">Registrarse</button>
+        </form>
+
+        <div class="login-link">
+            ¿Ya tenés una cuenta? <a href="/dashboard/login">Iniciar sesión</a>
+        </div>
+    </div>
+</body>

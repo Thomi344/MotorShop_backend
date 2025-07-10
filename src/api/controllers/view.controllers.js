@@ -1,5 +1,5 @@
 // =================================================================
-// ================== Controladores de Productos ===================
+// ================== Controladores de VISTAS ===================
 // =================================================================
 
 //------ Gestiona la peticiones ----- //
@@ -90,6 +90,36 @@ export const eliminarProductoDash = async(req,res)=>{
         console.error("Error al eliminar un producto para dashboard: ",error);
         res.status(500).json({
             error:"Error interno al eliminar un producto para dashboard"
+        });
+    };
+};
+
+export const renderLogin = async(req ,res )=>{
+    // ---- Renderizo la informacion en el login.EJS ----
+    try{
+    res.render("login",{
+        title:"Login",
+        about:"Ingrese sus credenciales"
+    });
+    }catch(error){
+        console.error("Error al logear el usuario: ",error);
+        res.status(500).json({
+            error:"Error interno al logear el usuario"
+        });
+    };
+};
+
+export const renderRegister = async(req,res)=>{
+    // ---- Renderizo la informacion en el register.EJS ----
+    try{
+        res.render("register",{
+            title:"Registro",
+            about:"Crea una nueva cuenta"
+        });
+    }catch(error){
+        console.error("Error al renderizar el registro: ",error);
+        res.status(500).json({
+            error:"Error interno al renderizar el registro"
         });
     };
 };

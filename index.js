@@ -4,7 +4,7 @@
 import express from "express";
 import environments from "./src/api/config/environments.js";
 import cors from "cors";
-import { productosRouter,viewRoutes } from "./src/api/routes/index.js";
+import { productosRouter,viewRoutes,usuariosRouter } from "./src/api/routes/index.js";
 import {loggerUrl} from "./src/api/middlewares/middlewares.js";
 
 
@@ -53,7 +53,10 @@ app.get("/",(req,res)=>{ res.send("Hola mundo"); });
 
 // ----- VISTAS DASHBOARD ----- //
 app.use("/dashboard",viewRoutes);
+// ----- VISTAS USUARIOS ----- //
+
 // ----- API REST ----- //
 app.use("/api/productos",productosRouter);
+app.use("/api/usuarios",usuariosRouter);
 
 app.listen(PORT,()=>{console.log("Servidor corriendo en el puerto: " + PORT)});
