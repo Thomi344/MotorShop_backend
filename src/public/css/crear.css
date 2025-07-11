@@ -11,7 +11,8 @@ body{
 main#contenedor-put {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 0;
+    padding: 20px 0px 20px 0px;
 }
 
 .crudForm-container {
@@ -86,4 +87,17 @@ form#form-put-producto input[type="submit"]:hover {
     background-color: var(--color-secundario);
 }
 
+/* Comportamiento con el modo oscuro activado */
 
+.dark-mode #actualizarProducto-container{
+    background-color: rgb(27, 27, 27);
+}
+
+.dark-mode h2,
+.dark-mode form#form-put-producto label {
+    color: #7fa6ce;
+}
+
+.dark-mode #contenedor-put{
+    background-color: #000000;
+}
