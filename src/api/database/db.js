@@ -15,6 +15,8 @@ const connection = mysql.createPool({
     database: database.name,
     user: database.user,
     password: database.password
+    ,port: database.port,
+    ssl: database.ssl
 });// Conjunto de conexiones a la db(activas y reutilizables)
 
 export default connection;
