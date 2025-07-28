@@ -18,7 +18,7 @@ export default{
         password : process.env.DB_PASSWORD,
         port : process.env.DB_PORT || 3306,
         ssl:{
-            ca:caCert
+            rejectUnauthorized: false
         }
     }
 };
