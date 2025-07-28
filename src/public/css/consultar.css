@@ -11,6 +11,7 @@ body {
     background-color: #f1f1f1;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 #contenedor-get {
@@ -87,4 +88,25 @@ form input[type="submit"]:hover {
     background-color: #ffd6d6;
     color: #c0392b;
     font-weight: bold;
+}
+
+/* Comportamiento con modo oscuro */
+
+.dark-mode #contenedor-get{
+    background-color: #000000;
+}
+
+.dark-mode .crudForm-container h2{
+    color: white;
+}
+
+.dark-mode #getId-container {
+    background-color: #000000;
+    
+}
+
+html .dark-mode{
+    background-color: rgb(24, 24, 58);
+    height: 120vh;
+    margin-bottom: 0;
 }

@@ -109,3 +109,29 @@ html {
     background-color: #f1f1f1; ;
 }
 
+
+/* Comportamiento con el modo oscuro activado */
+
+.dark-mode #contenedor-get {
+    background:  rgb(26, 26, 26);
+}
+
+html .dark-mode{
+    background-color: rgb(24, 24, 58);
+    height: 180vh;
+    margin-bottom: 0;
+}
+
+
+.dark-mode #getId-list{
+    color: white;
+}
+
+.dark-mode .producto-item{
+    background-color: black;
+}
+
+.dark-mode h2,
+.dark-mode label{
+    color: #7fa6ce;
+}

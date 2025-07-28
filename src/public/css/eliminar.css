@@ -101,3 +101,29 @@ form input[type="submit"]:hover {
 body,html{
     background-color: #f1f1f1;
 }
+
+/* Comportamiento con el modo oscuro activado */
+
+.dark-mode h2, 
+.dark-mode h3,
+.dark-mode label{
+    color: #7fa6ce;
+}
+
+.dark-mode #contenedor-delete{
+    background-color: rgb(0, 0, 0);
+}
+
+.dark-mode{
+    background-color: rgb(27,27,27);
+    height: 120vh;
+}
+
+.dark-mode #productoEncontrado,
+.dark-mode .producto-item{
+    background-color: rgb(27,27,27);
+}
+
+.dark-mode .producto-item{
+    color: white;
+}

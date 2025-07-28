@@ -57,3 +57,12 @@
         getIdLista.innerHTML = `<p>${error.message}</p>`;
         }
     });
+
+//Activación de modo oscuro
+function modoOscuro(){
+    document.getElementById("boton-modo_oscuro").addEventListener("click", () =>{
+        document.body.classList.toggle("dark-mode");
+    })
+}
+
+modoOscuro();
