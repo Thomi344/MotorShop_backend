@@ -2,13 +2,11 @@
 // === IMPORTACIONES ===
 // =======================
 import dotenv from "dotenv";
-import fs from "fs";
-import { join } from "../utils/index.js"; // Usamos join desde tu utils
+
 
 // ---- cargamos las variables de entorno desde el archivo .env ---- //
 dotenv.config();
 
-const caCert = fs.readFileSync(join("src", "certs", "ca.pem"));
 export default{
     port :process.env.PORT || 3000,
     database:{
